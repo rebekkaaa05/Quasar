@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Health Care Service - Address Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Home Health Care Service</h1>
+        <p>Please provide your address details</p>
+        <form id="address-form" class="form">
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <div id="services" class="hidden section">
+            <h2>Available Services</h2>
+            <select id="service-select" class="select">
+                <option value="">Select a Service</option>
+                <option value="doctor-care">Doctor Care</option>
+                <option value="nurse-visit">Nurse Visit</option>
+                <option value="adult-vaccine">Adult Vaccine</option>
+                <option value="physio-care">PhysioCare</option>
+                <option value="medical-equipment">Medical Equipment Renting</option>
+                <option value="laboratory-works">Laboratory Works</option>
+                <option value="contact-us">Contact Us</option>
+            </select>
+        </div>
+        <div id="hospitals" class="hidden section">
+            <h2>Select a Hospital</h2>
+            <select id="hospital-select" class="select">
+                <option value="">Select a Hospital</option>
+                <option value="prs-hospital">PRS Hospital (Rating 4.1)</option>
+                <option value="ananthapuri-hospital">Ananthapuri Hospital (Rating 4.3)</option>
+                <option value="cosmopolitan-hospital">Cosmopolitan Hospital (Rating 4.4)</option>
+                <option value="kims-hospital">KIMS Hospital (Rating 4.8)</option>
+            </select>
+        </div>
+        <div id="specialties" class="hidden section">
+            <h2>Available Specialties</h2>
+            <ul class="specialty-list">
+                <li data-specialty="cardiology">Cardiology</li>
+                <li data-specialty="gastroenterology">Gastroenterology</li>
+                <li data-specialty="endocrinology">Endocrinology and Diabetics</li>
+                <li data-specialty="orthopedics">Orthopedics</li>
+                <li data-specialty="internal-medicine">Internal Medicine</li>
+            </ul>
+        </div>
+        <div id="doctors" class="hidden section">
+            <h2>Select a Doctor</h2>
+            <select id="doctor-select" class="select">
+                <option value="">Select a Doctor</option>
+                <!-- Cardiology -->
+                <option class="cardiology prs-hospital hidden" value="dr-tinny-nair">Dr. Tinny Nair</option>
+                <option class="cardiology prs-hospital hidden" value="dr-krishna-mohan">Dr. Krishna Mohan</option>
+                <option class="cardiology ananthapuri-hospital hidden" value="dr-shifas-babu-m">Dr. Shifas Babu M</option>
+                <option class="cardiology ananthapuri-hospital hidden" value="dr-anand-marthanda-pillai">Dr. Anand Marthanda Pillai</option>
+                <option class="cardiology kims-hospital hidden" value="dr-padmaja-np">Dr. Padmaja NP</option>
+                <option class="cardiology kims-hospital hidden" value="dr-meera-r">Dr. Meera R</option>
+                <option class="cardiology cosmopolitan-hospital hidden" value="dr-a-george-koshy">Dr. A George Koshy</option>
+                <option class="cardiology cosmopolitan-hospital hidden" value="dr-ajaykumar-r">Dr. Ajaykumar R</option>
+                <!-- Gastroenterology -->
+                <option class="gastroenterology prs-hospital hidden" value="dr-rakesh-s">Dr. Rakesh S</option>
+                <option class="gastroenterology prs-hospital hidden" value="dr-anush-mohan">Dr. Anush Mohan</option>
+                <option class="gastroenterology ananthapuri-hospital hidden" value="dr-thankappan-kr">Dr. Thankappan K R</option>
+                <option class="gastroenterology ananthapuri-hospital hidden" value="dr-rajeevan-s">Dr. Rajeevan S</option>
+                <option class="gastroenterology cosmopolitan-hospital hidden" value="dr-jacob-philip">Dr. Jacob Philip</option>
+                <option class="gastroenterology cosmopolitan-hospital hidden" value="dr-narendranathan-m">Dr. Narendranathan M</option>
+                <option class="gastroenterology kims-hospital hidden" value="dr-ajith-k-nair">Dr. Ajith K Nair</option>
+                <option class="gastroenterology kims-hospital hidden" value="dr-arun-p">Dr. Arun P</option>
+                <!-- Endocrinology -->
+                <option class="endocrinology prs-hospital hidden" value="dr-tittu-oommen">Dr. Tittu Oommen</option>
+                <option class="endocrinology prs-hospital hidden" value="dr-altaf-ahmed">Dr. Altaf Ahmed</option>
+                <option class="endocrinology ananthapuri-hospital hidden" value="dr-veena-v-nair">Dr. Veena V Nair</option>
+                <option class="endocrinology ananthapuri-hospital hidden" value="dr-aneesh-gosh-ms">Dr. Aneesh Gosh MS</option>
+                <option class="endocrinology cosmopolitan-hospital hidden" value="dr-mahesh-sukumaran">Dr. Mahesh Sukumaran</option>
+                <option class="endocrinology cosmopolitan-hospital hidden" value="dr-soumya-s">Dr. Soumya S</option>
+                <option class="endocrinology kims-hospital hidden" value="dr-akhil-krishna">Dr. Akhil Krishna</option>
+                <option class="endocrinology kims-hospital hidden" value="dr-thushant-thomas">Dr. Thushant Thomas</option>
+                <!-- Orthopedics -->
+                <option class="orthopedics prs-hospital hidden" value="dr-pramod-at">Dr. Pramod A T</option>
+                <option class="orthopedics prs-hospital hidden" value="dr-rajesh-k">Dr. Rajesh K</option>
+                <option class="orthopedics ananthapuri-hospital hidden" value="dr-gopal-a">Dr. Gopal A</option>
+                <option class="orthopedics ananthapuri-hospital hidden" value="dr-nabeel-thatha">Dr. Nabeel Thatha</option>
+                <option class="orthopedics cosmopolitan-hospital hidden" value="dr-subin-sugath">Dr. Subin Sugath</option>
+                <option class="orthopedics cosmopolitan-hospital hidden" value="dr-sabari-girish-r">Dr. Sabari Girish R</option>
+                <option class="orthopedics kims-hospital hidden" value="dr-b-madan-mohan">Dr. B Madan Mohan</option>
+                <option class="orthopedics kims-hospital hidden" value="dr-rajesh-v-pillai">Dr. Rajesh V Pillai</option>
+                <!-- Internal Medicine -->
+                <option class="internal-medicine prs-hospital hidden" value="dr-shareek-ps">Dr. Shareek P S</option>
+                <option class="internal-medicine ananthapuri-hospital hidden" value="dr-sudha-p">Dr. Sudha P</option>
+                <option class="internal-medicine cosmopolitan-hospital hidden" value="dr-abhilash-k">Dr. Abhilash K</option>
+                <option class="internal-medicine cosmopolitan-hospital hidden" value="dr-baby-paul">Dr. Baby Paul</option>
+                <option class="internal-medicine kims-hospital hidden" value="dr-vijayalakshmi-n">Dr. Vijayalakshmi N</option>
+            </select>
+        </div>
+        <div id="vaccinations" class="hidden section">
+            <h2>Select Vaccination</h2>
+            <ul id="vaccination-list" class="item-list">
+                <li data-cost="1000">H1N1 (Cost: 1000)</li>
+                <li data-cost="1500">Measles (Cost: 1500)</li>
+                <li data-cost="1500">Mumps (Cost: 1500)</li>
+                <li data-cost="1500">Rubella (Cost: 1500)</li>
+                <li data-cost="1200">Tetanus injection / Diphtheria (Cost: 1200)</li>
+                <li data-cost="1300">Typhoid (Cost: 1300)</li>
+                <li data-cost="1000">Flu Vaccination (Cost: 1000)</li>
+                <li data-cost="1700">Chicken Pox (Cost: 1700)</li>
+                <li data-cost="2000">Hepatitis A and Hepatitis B Vaccination (Cost: 2000)</li>
+            </ul>
+        </div>
+        <div id="nursing-care" class="hidden section">
+            <h2>Nursing Care Options</h2>
+            <ul id="nursing-care-list" class="item-list">
+                <li data-name="Anugraha Associate" data-rating="4.4" data-address="Pappanamkode, Thiruvananthapuram">Anugraha Associate. 4.4 (18 Ratings). Pappanamkode, Thiruvananthapuram</li>
+                <li data-name="Guruvayoorappan Associates" data-rating="4.8" data-address="Thycaud, Thiruvananthapuram">Guruvayoorappan Associates. 4.8 (207 Ratings). Thycaud, Thiruvananthapuram</li>
+                <li data-name="Medicross" data-rating="4.3" data-address="Varkala, Varkala">Medicross. 4.3 (13 Ratings). Varkala, Varkala</li>
+                <li data-name="Divya Matha Home Nursing" data-rating="3.2" data-address="Thirumala, Thiruvananthapuram">Divya Matha Home Nursing. 3.2 (35 Ratings). Thirumala, Thiruvananthapuram</li>
+                <li data-name="Ameya Placement and Home Nursing" data-rating="" data-address="">Ameya Placement and Home Nursing</li>
+            </ul>
+            <h2>Select a Nursing Care Treatment</h2>
+            <ul id="nursing-care-treatments-list" class="item-list">
+                <li data-cost="1500">Major dressing at home (Cost: 1500)</li>
+                <li data-cost="800">Minor dressing at home (Cost: 800)</li>
+                <li data-cost="1200">ECG (Cost: 1200)</li>
+                <li data-cost="1800">Foley Catheter Insertion (Cost: 1800)</li>
+                <li data-cost="2000">IV Infusion (Cost: 2000)</li>
+            </ul>
+        </div>
+        <div id="physiocare-treatments" class="hidden section">
+            <h2>PhysioCare Treatments</h2>
+            <ul id="physiocare-list" class="item-list">
+                <li data-name="Chest Physiotherapy" data-cost="2000-10000">Chest Physiotherapy: This physiotherapy treatment is especially for those suffering from respiratory /cardiac problems. This helps in improving respiratory efficiency, promoting the expansion of lungs strengthening respiratory muscles, and eliminating secretions from the respiratory system.</li>
+                <li data-name="Musculoskeletal Physiotherapy" data-cost="2000-10000">Musculoskeletal Physiotherapy: This physiotherapy treatment is for people suffering from musculoskeletal problems. This physiotherapy includes the treatment of muscles, bones, joints, nerves, ligaments, cartilage, and spinal discs.</li>
+                <li data-name="Orthopedic Physiotherapy" data-cost="2000-10000">Orthopedic Physiotherapy: This physiotherapy treatment is associated mainly with bones. This physiotherapy is used for the rehabilitation of patients who are either planning to undergo surgery or who have already undergone surgery.</li>
+                <li data-name="Post-Surgical Physiotherapy" data-cost="2000-10000">Post-Surgical Physiotherapy: This physiotherapy treatment is made especially for those who have undergone surgeries. Post-Surgical physiotherapy helps in the restoration of activity post any surgery. Mobilization exercises, Muscle strengthening exercises, and stretching exercises are mainly used in this treatment by physical therapists. Common surgeries include the spine, hip, ankle, shoulder, and cardiac surgeries.</li>
+            </ul>
+        </div>
+        <div id="dates" class="hidden section">
+            <h2>Select a Date</h2>
+            <input type="date" id="date-select" class="date-input">
+        </div>
+        <div id="timeslots" class="hidden section">
+            <h2>Select a Time Slot</h2>
+            <select id="timeslot-select" class="select">
+                <option value="">Select a Time Slot</option>
+                <option value="09:00-10:00">09:00 - 10:00</option>
+                <option value="10:00-11:00">10:00 - 11:00</option>
+                <option value="11:00-12:00">11:00 - 12:00</option>
+            </select>
+        </div>
+        <div id="contact-us" class="hidden section">
+            <h2>Contact Us</h2>
+            <form id="contact-form" class="form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+        <div id="confirmation" class="hidden section">
+            <h2>Thank You!</h2>
+            <p>Your appointment has been booked successfully. Please pay the amount when the service arrives.</p>
+            <p id="payment-amount"></p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
